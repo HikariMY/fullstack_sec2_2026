@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title"><%= book.title %></h1>
+            <p class="author">by <%= book.author %></p>
+
+            <div class="actions">
+                <a href="/update/<%= book.id %>" class="btn edit">Edit</a>
+
+                <form action="/delete/<%= book.id %>" method="POST" style="display:inline;">
+                    <button type="submit" class="btn delete">Delete</button>
+                </form>
+
+                <a href="/" class="btn back">Back to List</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
